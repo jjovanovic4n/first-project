@@ -1,0 +1,13 @@
+<div class="row m-3">
+  <div class="col-9">
+    <h3 class="text--shadow">{{movie?.name}}</h3>
+    <mov-comment-form (addComment)="addComment($event)"></mov-comment-form>
+    <div *ngFor="let comment of comments?.results" class="mt-4">
+      <mov-comment [comment]="comment"></mov-comment>
+    </div>
+  </div>
+  <div class="col-3">
+    <img src="assets/images/movie/{{movie?._id}}.jpg" class="float-right mt-1" alt="Poster" width="100%">
+  </div>
+</div>
+

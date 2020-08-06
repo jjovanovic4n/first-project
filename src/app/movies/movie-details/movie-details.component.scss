@@ -1,0 +1,20 @@
+@import '../../../styles.scss';
+
+.movie__details {
+    p {
+        display:inline-block;
+        padding: 0.2rem  0.5rem;
+        border-right: 1px solid $red_dark;
+        &:first-child {
+            border-left: 1px solid $red_dark;
+        }
+    }
+}
+.btn--position {
+    margin-top: 0.5rem;
+    margin-left: 8rem;
+}
+.text--justify {
+    text-align: justify;
+    text-indent: 20px;
+}
