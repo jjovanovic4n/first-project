@@ -1,0 +1,24 @@
+<nav class="header1 navbar navbar-expand-sm  bcg--light">
+    <div class="collapse navbar-collapse" id="navbarNav" >
+        <ul class="navbar-nav mr-auto ">
+            <li class="nav-item ">
+                <a class="nav-link text-uppercase font-weight-bold font--title" [routerLink]="['/home']" routerLinkActive="active">Movie<span class="text-red">Mania</span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">  
+            <li class="nav-item">
+                <a class="nav-link hover--red" [routerLink]="['/movies']" routerLinkActive="active">Movies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link hover--red" [routerLink]="['/edit']" routerLinkActive="active">Add new movie</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="card text-red ">
+    <img class="card-img"src="assets/images/cover.jpg"  alt="Film image">
+    <div class="card-img-overlay">
+      <h5 class="card-title text-uppercase font-italic ">Best movies</h5>
+      <p class="card-text font-italic text-white">In One Place</p>
+    </div>
+</div>

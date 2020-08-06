@@ -1,0 +1,110 @@
+<div class="row ">
+    <div class="col-3">
+        <button [routerLink]="['/movies/']" class="btn--back btn--basic bt-lg"><svg width="2rem" height="2rem" viewBox="0 0 16 16" class="bi bi-box-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M4.354 11.354a.5.5 0 0 0 0-.708L1.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"/>
+            <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H2a.5.5 0 0 0 0 1h9a.5.5 0 0 0 .5-.5z"/>
+            <path fill-rule="evenodd" d="M14 13.5a1.5 1.5 0 0 0 1.5-1.5V4A1.5 1.5 0 0 0 14 2.5H7A1.5 1.5 0 0 0 5.5 4v1.5a.5.5 0 0 0 1 0V4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5H7a.5.5 0 0 1-.5-.5v-1.5a.5.5 0 0 0-1 0V12A1.5 1.5 0 0 0 7 13.5h7z"/>
+          </svg></button>
+    </div>
+</div>
+<div class="row mt-4 ">
+    <div class="col-10 form--theme-red container-fluid">
+        <form [formGroup]="movieForm" (submit)="onSubmit()">
+            <div class="form-group row">
+                <label for="name" class="col-2 col-form-label">Name</label>
+                <div class="col-md-10 col-xs-6">
+                    <input formControlName="name" id="name" class="form-control" type="text" name="name">
+                    <small class="text-danger" 
+                        *ngIf="movieForm.controls.name.touched && movieForm.controls.name.errors?.required">
+                            Name is required</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="description" class="col-2 col-form-label">Description</label>
+                <div class="col-md-10 col-xs-6">
+                    <textarea formControlName="description" id="description" class="form-control" name="description"></textarea>
+                    <span class="text-danger" *ngIf="movieForm.controls.description.touched">
+                        <small  *ngIf="movieForm.controls.description.errors?.required">
+                            Description is required</small>
+                        <small *ngIf="movieForm.controls.description.errors?.minlength">
+                            Description must be between 10 and 650 characters.</small>
+                        <small *ngIf="movieForm.controls.description.errors?.maxlength">
+                            Description must be between 10 and 650 characters.</small>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="year" class="col-2 col-form-label">Year</label>
+                <div class="col-md-10 col-xs-6">
+                    <input formControlName="year" id="year" class="form-control" type="text" name="year">
+                    <span class="text-danger" *ngIf="movieForm.controls.year.touched">
+                        <small  *ngIf="movieForm.controls.year.errors?.required">
+                            Year is required</small>
+                        <small *ngIf="movieForm.controls.year.errors?.minlength">
+                            Year must contain 4 numbers</small>
+                        <small *ngIf="movieForm.controls.year.errors?.maxlength">
+                            Year must contain 4 numbers</small>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="rating" class="col-2 col-form-label">Rating</label>
+                <div class="col-md-10 col-xs-6">
+                    <input formControlName="rating" id="rating" class="form-control" type="text" name="rating" readonly placeholder="1-100">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="duration" class="col-2 col-form-label">Duration</label>
+                <div class="col-md-10 col-xs-6">
+                    <input formControlName="duration" id="duration" class="form-control" type="text" name="duration">
+                    <small class="text-danger" 
+                        *ngIf="movieForm.controls.duration.touched && movieForm.controls.duration.errors?.required">
+                        Duration is required</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="director" class="col-2 col-form-label">Director</label>
+                <div class="col-md-10 col-xs-6">
+                    <input formControlName="director" id="director" class="form-control" type="text" name="director">
+                    <small class="text-danger" 
+                        *ngIf="movieForm.controls.director.touched && movieForm.controls.director.errors?.required">
+                        Director is required</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="genre" class="col-2">Genre</label>
+                <div class="col-md-2 col-xs-6 ">
+                    <select class="form-control" name="genre" formControlName="genre" id="genre" >
+                        <option *ngFor="let genre of genres" value="{{genre.name}}">{{genre.name}}</option>
+                    </select>
+                    <small class="text-danger" 
+                        *ngIf="movieForm.controls.genre.touched && movieForm.controls.genre.errors?.required">
+                        Genre is required</small>
+                </div>
+                <div class="col-1">
+                    <button title="Enter new Genre" type="button" class=" btn--basic btn--group p-1" (click)="openGenreForm()">+</button>
+                </div>
+            </div>
+            <div class="row float-right">
+                <div class="col mt-2">
+                    <button type="submit" class="btn--basic btn--group" [disabled]="movieForm.invalid">Submit</button>
+                </div>
+            </div>
+        </form>
+        <div *ngIf="genreClicked">
+            <form class="form">
+                <div class="form-group row mt-5">
+                    <label for="newGenre" class="col-md-2 col-xs-6">Enter new Genre</label>
+                    <div class="col-md-6 col-xs-6">
+                        <input id="newGenre" class="form-control" type="text" name="newGenre" [(ngModel)]="newGenre">
+                    </div>
+                    <div class="col-md-2 col-xs-6">
+                        <button (click)="submitGenre()" class="btn-group-sm btn--basic btn--group">Add new genre</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
