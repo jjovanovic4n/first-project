@@ -1,24 +1,47 @@
-<nav class="header1 navbar navbar-expand-sm  bcg--light">
-    <div class="collapse navbar-collapse" id="navbarNav" >
-        <ul class="navbar-nav mr-auto ">
-            <li class="nav-item ">
-                <a class="nav-link text-uppercase font-weight-bold font--title" [routerLink]="['/home']" routerLinkActive="active">Movie<span class="text-red">Mania</span></a>
+<div class="logo-box">
+    <svg class="logo-box__logo">
+        <use xlink:href="assets/sprite.svg#icon-video-camera"></use>
+    </svg>
+    <a class="logo-box__logo-text" [routerLink]="['/home']" routerLinkActive="active">Movie<span class="text-red">Mania</span></a>
+</div>
+<nav class="navigation" >
+    <div class="navigation__nav" >
+        <ul class="navigation__list">  
+            <li class="navigation__item">
+                <a class="navigation__link " [routerLink]="['/movies']" routerLinkActive="active">Home</a>
             </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">  
-            <li class="nav-item">
-                <a class="nav-link hover--red" [routerLink]="['/movies']" routerLinkActive="active">Movies</a>
+            <li class="navigation__item">
+                <a class="navigation__link" [routerLink]="['/movies']" routerLinkActive="active">Movies</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link hover--red" [routerLink]="['/edit']" routerLinkActive="active">Add new movie</a>
+            <li class="navigation__item">
+                <a class="navigation__link" [routerLink]="['/edit']" routerLinkActive="active">Add new movie</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" [routerLink]="['/movies']" routerLinkActive="active">Top movies</a>
             </li>
         </ul>
     </div>
 </nav>
-<div class="card text-red ">
-    <img class="card-img"src="assets/images/cover.jpg"  alt="Film image">
-    <div class="card-img-overlay">
-      <h5 class="card-title text-uppercase font-italic ">Best movies</h5>
-      <p class="card-text font-italic text-white">In One Place</p>
+<nav class="navbar-secondary" id="navbar-secondary">
+    <div class="navbar-secondary__nav2" >
+        <ul class="navbar-secondary__list2">  
+            <li class="navbar-secondary__item2">
+                <a class="navbar-secondary__link2 " [routerLink]="['/movies']" routerLinkActive="active">Home</a>
+            </li>
+            <li class="navbar-secondary__item2">
+                <a class="navbar-secondary__link2" [routerLink]="['/movies']" routerLinkActive="active">Movies</a>
+            </li>
+            <li class="navbar-secondary__item2">
+                <a class="navbar-secondary__link2" [routerLink]="['/edit']" routerLinkActive="active">Add new movie</a>
+            </li>
+            <li class="navbar-secondary__item2">
+                <a class="navbar-secondary__link2" [routerLink]="['/movies']" routerLinkActive="active">Top movies</a>
+            </li>
+        </ul>
     </div>
+</nav>
+<div class="text-box">
+      <h1 class="text-box__title-primary">Best movies</h1>
+      <p class="text-box__title-secondary">In One Place</p>
 </div>
+

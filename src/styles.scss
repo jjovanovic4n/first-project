@@ -1,43 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 /* Importing Bootstrap SCSS file. */
 
-@import 'scss/variables';
-@import 'scss/mixins';
+@import 'scss/main.scss';
 @import '../node_modules/bootstrap/dist/css/bootstrap';
 
-@include main;
 
 a {
-    color: $color_grey;
+    color: $color-gray-dark-1;
     &:hover {
-        color: $color_grey; 
+        color: $color-gray-dark-1; 
     }
 }
-.font--title {
-    font-family: $font_title;
-}
+
 .text-red {
-    color: $red_dark;
+    color: $color-primary;
 }
 .text--shadow {
-    text-shadow: 1px 1px $red-dark;
+    text-shadow: 1px 1px $color-primary;
 }
 .bcg--light {
-    background-color:$color_light;
+    background-color:$color-gray-light-1;
 }
 .bcg--dark {
-    background-color: $color_dark;
+    background-color: $color-gray-dark-2;
 }
 .hover--red {
-    color: $color_grey;
+    color: $color-gray-dark-1;
     &:hover {
-        color: $red_dark;
+        color: $color-primary;
         text-decoration: none;
     }
 }
 .btn--basic {
-    background-color: $red_dark;
-    color: white;
+    background-color: $color-primary;
+    color: $color-white;
     padding: 0.5rem;
     
 }
@@ -62,13 +58,13 @@ a {
 }
 .form--theme-red {
     padding: 2rem 1rem;
-    border: 1px solid $color_light;
-    box-shadow: 1px 1px  2px 2px $red-dark;
+    border: 1px solid $color-gray-light-1;
+    box-shadow: 1px 1px  2px 2px $color-primary;
 
     input, textarea, select{
         border: none;
-        border-bottom: 2px solid $color_light;
-        box-shadow: 1px 1px $red-dark;
+        border-bottom: 2px solid $color-gray-light-1;
+        box-shadow: 1px 1px $color-primary;
     }
     label {
         @extend .text--shadow;
