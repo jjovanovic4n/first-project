@@ -1,7 +1,7 @@
 <p>
     {{showText}} 
     <span *ngIf="showText.length > textLength">
-      <button class="btn btn-link" *ngIf="showMore" (click)="toggleShow()">(Show Less)</button>
-      <button class="btn btn-link" *ngIf="!showMore" (click)="toggleShow()">(Show More)</button>
+      <span class="show-more" *ngIf="showMore" (click)="toggleShow()">(Show Less)</span>
+      <span class="show-more" *ngIf="!showMore" (click)="toggleShow()">(Show More)</span>
     </span>
 </p>

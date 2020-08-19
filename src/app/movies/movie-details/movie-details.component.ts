@@ -1,8 +1,10 @@
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movie-list/services/movie.service';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from '../movie-list/model/movie';
+import { CommentsComponent } from './comments/comments.component';
 
 
 @Component({
@@ -20,7 +22,6 @@ export class MovieDetailsComponent implements OnInit {
     let id: string = this.route.snapshot.params.id;
     if (id) {
       this.service.getMovie(Number(id)).subscribe(data => {
-       
         this.movie = data;
       });
     }
@@ -44,7 +45,7 @@ export class MovieDetailsComponent implements OnInit {
       this.update(tempMovie);
     }
   }
-  
+
   
 
 }

@@ -20,6 +20,11 @@
     transform: translate(-50%,-50%);
 }
 
+@mixin bcg__blur ( $color, $alpha,  $blur) {
+    background-color: rgba($color, $alpha);
+    backdrop-filter: blur($blur);
+}
+
 
 
 

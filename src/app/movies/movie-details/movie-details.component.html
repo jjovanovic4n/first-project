@@ -1,49 +1,38 @@
-
-<div class="row">
-    <div class="col-3">
-        <button [routerLink]="['/movies/']" class="btn--back btn--basic bt-lg"><svg width="2rem" height="2rem" viewBox="0 0 16 16" class="bi bi-box-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M4.354 11.354a.5.5 0 0 0 0-.708L1.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"/>
-            <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H2a.5.5 0 0 0 0 1h9a.5.5 0 0 0 .5-.5z"/>
-            <path fill-rule="evenodd" d="M14 13.5a1.5 1.5 0 0 0 1.5-1.5V4A1.5 1.5 0 0 0 14 2.5H7A1.5 1.5 0 0 0 5.5 4v1.5a.5.5 0 0 0 1 0V4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5H7a.5.5 0 0 1-.5-.5v-1.5a.5.5 0 0 0-1 0V12A1.5 1.5 0 0 0 7 13.5h7z"/>
-          </svg></button>
+<div class="content_pages">
+    <div class="exit-line">
+        <button [routerLink]="['/movies/']" class="circle-btn">
+            <svg class="icon-basic">
+                 <use xlink:href="assets/sprite.svg#icon-circle-left"></use>
+             </svg>
+        </button>
     </div>
-</div>
-<div class="row justify-content-center ">
-        <div class="col-md-2 col-xs-6">
-            <img src="assets/images/movie/{{movie?._id}}.jpg" class="float-right img-thumbnail" alt="Poster" width="100%">
+    <div class="top-content">
+        <div class="top-content__img-box">
+            <img src="assets/images/movie/{{movie?._id}}.jpg" class="top-content__img" alt="Poster" width="100%">
         </div>
-        <div class="col-8">
-            <h5>{{movie?.name}}</h5>
-            <div class="movie__details">
-                <p>{{movie?.year}}</p>
-                <p>{{movie?.genre}}</p>
-                <p>{{movie?.duration}}</p>
+        <div class="top-content__text">
+            <h2 class="heading-secondary u-margin-bottom-small">{{movie?.name}}</h2>
+            <div class="top-content__item-box u-margin-bottom-small">
+                <p class="top-content__item">{{movie?.year}}</p>
+                <p class="top-content__item">{{movie?.genre}}</p>
+                <p class="top-content__item">{{movie?.duration}}</p>
             </div>
             <!-- <p>{{movie?.description}}</p> / Ovde ne prijavljuje gresku u konzoli-->
             <mov-show-more [text]="movie.description" [textLength]="250" class="text--justify"></mov-show-more>
-            <p class="float-right">Director : {{movie?.director}}</p>
+            <p class="top-content__text--right">Director : {{movie?.director}}</p>
         </div>
-</div>
-<div class="row">
-    <div class="col-6 btn--position">
-        <span *ngIf="showBtn" class="float-left" title="Double click to vote."><button  class="btn btn-success btn-sm"(click)="vote(movie?.rating + 1)">+</button>
-            <img src="assets/images/gold_star.png"> {{movie?.rating}}
-        <button  class="btn btn-danger btn-sm" (click)="vote(movie?.rating - 1)">-</button></span><br/>
+    </div>
+    <div class="voting">
+        <div class="voting__box">
+            <span *ngIf="showBtn" class="" title="Double click to vote."><button  class=" plus-minus-btn"  (click)="vote(movie?.rating + 1)">+</button>
+                <img src="assets/images/gold_star.png" class="voting__img"> {{movie?.rating}}
+            <button  class="plus-minus-btn" (click)="vote(movie?.rating - 1)">-</button></span><br/>
+        </div>
+    </div>
+    <div class="bottom-content">
+            <button [routerLink]="['/edit/', movie?._id]" class="_btn">Update movie info</button>
+            <button class=" _btn" (click)="showVoteBtn()">Vote</button>
+            <button class="_btn" [routerLink]="['comments']">Comment</button>
     </div>
 </div>
-<div class="row justify-content-center mt-5">
-    <div class="col-md-3 col-xs-6">
-        <button [routerLink]="['/edit/', movie?._id]" class="btn-block btn-group-sm btn--basic btn--group">Update movie info</button>
-    </div>
-    <div class="col-md-3 col-xs-6">
-        <button class=" btn-block btn-group-sm btn--basic btn--group" (click)="showVoteBtn()" >Vote</button>
-    </div>
-    <div class="col-md-3 col-xs-6">
-        <button class="btn-block btn-group-sm btn--basic btn--group" [routerLink]="['comments']" >Comment</button>
-    </div>
-</div>
-<div class="row">
-    <div class="col-12">
-        <router-outlet></router-outlet>
-      </div>
-</div>
+

@@ -16,6 +16,7 @@ export class EditComponent implements OnInit {
   movieForm:FormGroup;
   genreClicked: boolean = false;
   newGenre: string;
+  editMovie: boolean = false;
   
   
     constructor(private service:MovieService,private fb:FormBuilder, private route:ActivatedRoute, private router:Router) {
@@ -23,13 +24,13 @@ export class EditComponent implements OnInit {
      }
   
     ngOnInit(): void {
-     
       let id: string = this.route.snapshot.params.id;
       if (id) {
+        this.editMovie = true;
         this.service.getMovie(Number(id)).subscribe(data => {
           this.movie = data;
           this.movieForm.patchValue(this.movie);
-        });
+        });  
       }
       this.service.getGenres().subscribe(data => {
         this.genres = data;

@@ -1,0 +1,28 @@
+.show-more {
+    letter-spacing: .05rem;
+    font-style: italic;
+    transition: .5s all ease-in-out;
+    position: relative;
+    color:$color-primary-light-1;
+    
+    &::before {
+        border-top: .1rem solid $color-primary;
+        border-bottom: .1rem solid $color-primary;
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        right: 100%;
+        transition: .48s all ease-in-out;
+    }
+    &:hover{
+        letter-spacing: .4rem;
+        color: $color-white;
+    } 
+    &:hover:before {
+        left: 25%;
+        right: 25%;
+    }
+}

@@ -1,0 +1,56 @@
+.icon-basic {
+    width: 4rem;
+    height: 4rem;
+    fill: $color-primary;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    
+}
+.icon-basic--small {
+    width: 2rem;
+    height: 2rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.icon-basic--white {
+    @extend .icon-basic;
+    fill: $color-white;
+}
+
+.footer-icon {
+    @extend .icon-basic--white; 
+    margin-bottom: 1rem;
+    padding: .5rem;
+    &__bcg-1:hover {
+        fill: $color-facebook;
+    }
+
+    &__bcg-2:hover {
+        fill: $color-linkendin;
+    }
+
+    &__bcg-3:hover {
+        fill: $color-instagram;
+    }
+    &__bcg-4:hover {
+       transform: scale(1.1);
+    }
+}
+
+.icon-heart {
+    @extend .icon-basic--small;
+    fill: $color-primary;
+    transition: all .2s;
+    margin-bottom: .3rem;
+
+    &__hover:hover {
+        outline: none;
+        animation: pulsing 1s infinite;
+
+    }
+}
+
+

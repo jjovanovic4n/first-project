@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Comment} from '../model/comment';
+import { Movie } from 'src/app/movies/movie-list/model/movie';
 
 @Component({
   selector: 'mov-comment',

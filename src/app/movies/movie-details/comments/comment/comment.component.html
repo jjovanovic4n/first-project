@@ -1,14 +1,16 @@
-<div class="row">
-    <div class="col-sm-8">
-      <b>{{comment.author}}</b>
+<div class="comment">
+    <div class="comment__user">
+      <svg class="icon-basic">
+        <use xlink:href="assets/sprite.svg#icon-user"></use>
+      </svg>
     </div>
-    <div class="col-sm-4 text-right">
-      {{comment.date | date: "d.M.yyyy - H:mm"}}
+    <div class="comment__box">
+        <div class="comment__top">
+          <p class="comment__author">{{comment.author}}</p>
+          <p class="comment__date">{{comment.date | date: "d.M.yyyy - H:mm"}}</p>
+        </div>
+        <div class="comment__bottom">
+            <p  class="commnet__text text--justify">{{comment.text}}</p>
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <i>{{comment.text}}</i>
-    </div>
-  </div>
-  <br>
+</div>

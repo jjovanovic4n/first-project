@@ -1,6 +1,6 @@
 .header {
     text-transform: uppercase;
-    height: 95vh;
+    height: 100vh;
     background-image: linear-gradient(rgba($color-black, 0.7), rgba($color-black, 0.7)), url("/assets/images/mov.jpg");
     background-position: center;
     background-size: cover;
@@ -8,52 +8,5 @@
 
 }
 
-.logo-box {
-    height: 4rem;
-    margin-left: 3rem;
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: fixed;
-    z-index: 2;
-    
-     &__logo {
-        height: 3rem;
-        width: 3rem;
-        fill: $color-primary;
-        padding-right: .5rem;
-     }
-
-     &__logo-text {
-        font-family: $logo-font;
-        font-size: 3rem;
-    }
-}
-
-.text-box {
-    position: absolute;
-    top: 34%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 4rem;
-    color: $color-gray-light-2;
-    word-spacing: .4rem;
-    letter-spacing: .6rem;
-    transition: all .2s;
-   
-    &__title-primary {
-        font-size: 170%;
-        font-weight: 500;
-    }
-  
-    &:hover,
-    &:active,
-    &:focus {
-
-        animation: change_color 3s infinite;
-    }
-  }
 
   

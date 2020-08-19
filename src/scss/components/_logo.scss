@@ -1,0 +1,42 @@
+.logo-box {
+    height: 4rem;
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    z-index: 150;
+    
+     &__logo {
+        height: 3rem;
+        width: 3rem;
+        fill: $color-primary;
+        padding-right: .5rem;
+     }
+
+     &__logo-text {
+        font-family: $logo-font;
+        font-size: 3rem;
+    }
+}
+.logo-box-small {
+    height: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+     &__logo {
+        height: 2rem;
+        width: 2rem;
+        fill: $color-primary;
+        padding-right: .1rem;
+        padding-bottom: .2rem;
+     }
+
+     &__logo-text {
+        font-family: $logo-font;
+        font-size: 2rem;
+    }
+}

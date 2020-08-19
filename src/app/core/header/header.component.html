@@ -8,16 +8,16 @@
     <div class="navigation__nav" >
         <ul class="navigation__list">  
             <li class="navigation__item">
-                <a class="navigation__link " [routerLink]="['/movies']" routerLinkActive="active">Home</a>
+                <a class="navigation__link " [routerLink]="['/movies']" routerLinkActive="active" onclick="scrollToMain()">Home</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link" [routerLink]="['/movies']" routerLinkActive="active">Movies</a>
+                <a class="navigation__link" [routerLink]="['/movies']" routerLinkActive="active" onclick="scrollToMain()">Movies</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link" [routerLink]="['/edit']" routerLinkActive="active">Add new movie</a>
+                <a class="navigation__link" [routerLink]="['/edit']" routerLinkActive="active" onclick="scrollToMain()">Add new movie</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link" [routerLink]="['/movies']" routerLinkActive="active">Top movies</a>
+                <a class="navigation__link" [routerLink]="['/movies-top']" routerLinkActive="active" onclick="scrollToMain()">Top movies</a>
             </li>
         </ul>
     </div>
@@ -35,13 +35,13 @@
                 <a class="navbar-secondary__link2" [routerLink]="['/edit']" routerLinkActive="active">Add new movie</a>
             </li>
             <li class="navbar-secondary__item2">
-                <a class="navbar-secondary__link2" [routerLink]="['/movies']" routerLinkActive="active">Top movies</a>
+                <a class="navbar-secondary__link2" [routerLink]="['/movies-top']" routerLinkActive="active">Top movies</a>
             </li>
         </ul>
     </div>
 </nav>
 <div class="text-box">
-      <h1 class="text-box__title-primary">Best movies</h1>
-      <p class="text-box__title-secondary">In One Place</p>
+      <h1 class="heading-primary">Best movies</h1>
+      <h2 class="heading-secondary">In One Place</h2>
 </div>
 

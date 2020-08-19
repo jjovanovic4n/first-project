@@ -1,0 +1,60 @@
+._btn {
+    font-size: $default-font-size;
+    padding: .5rem 2rem;
+    margin-right: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10rem;
+    background-image: linear-gradient(to right, $color-primary,$color-primary-light-2);
+    color: $color-white;
+    transition: all .2s;
+
+    cursor: pointer;
+
+    &:hover  {
+        transform: translateY(-2px);
+        background-image: linear-gradient(to right, $color-primary-light-2, $color-primary);
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+       
+    }
+    &:active,
+    &:focus  {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+}
+
+.plus-minus-btn {
+    height: 3.5rem;
+    width: 3.5rem;
+    margin: .5rem;
+    border-radius: 50%;
+    color: $color-white;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, $color-primary,$color-primary-light-2);
+    
+    &:hover,
+    &:focus {
+        background-image: linear-gradient(to right, $color-primary-light-2, $color-primary);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        outline: none;
+        border: none;
+       
+    }
+}
+
+.circle-btn {
+    &,
+    &:focus,
+    &:active {
+        margin-left: .5rem;
+        background-color:rgba($color-black, 0.3);
+        border-radius: 50%;
+        border: none;
+        outline: none;
+    }
+}

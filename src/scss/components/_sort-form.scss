@@ -1,0 +1,40 @@
+.sort-form {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $color-white;
+    display: flex;
+    align-items: baseline;
+
+    &__label {
+       border-bottom: 1px solid $color-white;
+       transition: all .2s;
+       
+    }
+    &__label:hover {
+        border-bottom: none;
+        transform: scaleY(1);
+     }
+
+    &__select-box {
+        margin-left: 1rem;
+        
+    }
+    &__select,
+    &__select:active {
+        font-size: $default-font-size;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: inherit;
+        border-radius: .5rem;
+        outline: none;
+        padding: 1rem 1.5rem;
+        background-color:rgba($color-black, 0.3);
+        
+    } 
+    
+    
+
+    
+    
+    
+}

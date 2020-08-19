@@ -1,0 +1,70 @@
+.movie-top { 
+    height: 105rem;
+    width: 85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex: 1;
+    
+    &__list {
+        flex: 0 0 33%;
+        padding:  0 .5rem;
+        position: relative;
+    }
+
+    &__movie {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 25%;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 1rem;
+        overflow: hidden;
+        transition: all .5s;
+    }
+    
+    &__movie:hover &__img {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+
+    &__movie:hover &__name {
+        background-image: linear-gradient(to right, $color-primary-light-2,$color-primary);
+    }
+
+    &__name {
+        font-size: $default-font-size;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        color: $color-white;
+        background-image: linear-gradient(to right, $color-primary,$color-primary-light-2);
+        width: 100%;
+        min-height: 10rem;
+        margin: 0 auto;
+        padding: .5rem ;
+        position: relative;
+    }
+
+    &__index {
+        color: black;
+        background-color: white;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        opacity: .8;
+        transform: scale(1.59);
+        transition: transform 0.5s, opacity 0.4s;
+        width: 100%;
+        backface-visibility: hidden;
+    }
+}

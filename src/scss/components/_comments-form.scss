@@ -1,0 +1,27 @@
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1rem 2rem rgba($color-black, .1);
+    padding: 2rem 0;
+    padding-left: 5rem;
+
+    &__group {
+        padding: 1rem;
+    }
+
+    &__input,
+    &__textarea {
+        padding: 1rem;
+        border: none;
+        width: 90%;
+        font-size: $default-font-size;
+        font-family: inherit;
+        color: $color-gray-dark-1;
+        outline: none;
+        border-radius: .3rem;
+        &:focus {
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-primary;
+        } 
+    }
+}

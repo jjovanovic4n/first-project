@@ -1,0 +1,135 @@
+.footer {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-black, 1),
+        rgba($color-gray-dark-1, 0.800));
+        padding: 3rem 38rem;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: transparent;
+    font-size: $default-font-size;
+    
+//SOCIAL MEDIA
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2.5rem;
+        transition: all .2s;
+    }
+    &__media {
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__title {
+        font-size: $default-font-size;
+        color: $color-white;
+        text-transform: uppercase;
+        text-align: center;
+        width: 35rem;
+        border-bottom: 1px solid $color-white;
+        margin-right: 1rem;
+        letter-spacing: .3rem;
+    }
+
+    &__icons {
+       display: flex;
+       justify-content: space-between;
+    }
+
+//LOGO
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem;
+        
+        background-image: linear-gradient(
+                        to right bottom,
+                        rgba($color-black, 1),
+                        rgba($color-gray-dark-1, 0.800));
+        border-radius: 1.5rem;
+    }
+    &__box {
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        margin-top:  1rem;
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: rgba($color-white, .3);
+        text-transform: uppercase;
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+//USEFUL LINKS
+
+    &__useful-links {
+        display: flex;
+        align-items: center;;
+        flex-direction: column;
+        height: 15rem;
+    }
+
+    &__navigation {
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        list-style: none;
+        
+    }
+
+    &__item {
+        text-decoration: none;
+        transition: all .2s;
+        &:hover,
+        &:focus {
+            color: $color-primary;
+            background-color:$color-black;
+            box-shadow: 0 1rem 2rem rgba($color-white, .4);
+            transform: rotate(4deg) scale(1.3);
+            border-radius: .5rem;
+        }
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 .5rem 1rem rgba($color-white, .2);
+        }
+    }
+
+//CONTACT 
+    
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        height: 15rem;
+        color: $color-gray-dark-1;;
+    }
+
+//COPIRIGHT
+
+    &__copyright {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    &__link {
+        padding: .5rem;
+    }
+}

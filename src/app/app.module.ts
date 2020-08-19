@@ -20,6 +20,7 @@ import { CommentComponent } from './movies/movie-details/comments/comment/commen
 import { CommentFormComponent } from './movies/movie-details/comments/comment-form/comment-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShowMoreComponent } from './movies/movie-details/show-more/show-more.component';
+import { TopMoviesComponent } from './movies/movie-details/top-movies/top-movies.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ShowMoreComponent } from './movies/movie-details/show-more/show-more.co
     CommentComponent,
     CommentFormComponent,
     ShowMoreComponent,
+    TopMoviesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,22 @@
 //COLORS
 $color-primary: rgb(206, 81, 81);
 $color-primary-light-1: rgb(245, 200, 200);
-$color-primary-light-2: rgb(247, 126, 126);
+$color-primary-light-2: rgb(247, 152, 152);
 
 $color-gray-dark-1: rgb(167, 161, 161);
-$color-gray-dark-2:rgb(226, 226, 228);
+$color-gray-dark-2:rgb(208, 208, 209);
 
 $color-gray-light-1: rgb(242, 242, 243);
 $color-gray-light-2: rgb(241, 231, 231);
 
 $color-white: rgb(255, 255, 255);
 $color-black: rgb(0, 0, 0);
+$color-danger: rgb(247, 70, 70);
 
+//COLORS - SOCILA MEDIA ICONS
+$color-facebook:rgb(59,89,152);
+$color-linkendin:rgb(0, 119, 181);
+$color-instagram: rgb(195, 42, 163);
 
 
 //FONT
@@ -21,5 +26,5 @@ $logo-font: 'Oleo Script', cursive;
 
 
 //SHADOW
-$shadow-dark: 0 2rem 6rem rgba(0, 0 ,0, 3);
-$shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
+$shadow-dark: 0 2rem 6rem rgba(0, 0 ,0, .3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, .6);

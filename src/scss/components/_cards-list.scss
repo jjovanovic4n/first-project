@@ -1,0 +1,14 @@
+.cards {
+    height: 105rem;
+    width: 125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+    &__list {
+        flex: 0 0 22%;
+        padding: 1.5rem;
+    }
+}

@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
 
     window.addEventListener("scroll", this.scrollNavFunc);
+    
   }
 
   scrollNavFunc () {
@@ -22,6 +23,6 @@ export class HeaderComponent implements OnInit {
         } else {
           classID.className = "bottomMenu hide"
         }
-      }
+  }
   
 }

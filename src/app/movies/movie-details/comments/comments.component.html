@@ -1,13 +1,39 @@
-<div class="row m-3">
-  <div class="col-9">
-    <h3 class="text--shadow">{{movie?.name}}</h3>
-    <mov-comment-form (addComment)="addComment($event)"></mov-comment-form>
-    <div *ngFor="let comment of comments?.results" class="mt-4">
-      <mov-comment [comment]="comment"></mov-comment>
+<div class="content_pages">
+    <div class="exit-line">
+        <button [routerLink]="['/movies/']" class="circle-btn">
+            <svg class="icon-basic">
+                <use xlink:href="assets/sprite.svg#icon-circle-left"></use>
+            </svg>
+        </button>
     </div>
-  </div>
-  <div class="col-3">
-    <img src="assets/images/movie/{{movie?._id}}.jpg" class="float-right mt-1" alt="Poster" width="100%">
-  </div>
-</div>
+    <div class="comments">
+        <div class="comments__img-box">
+          <div class="box-1">
+            <img src="assets/images/pop1.jpg" class="comments__img--1" alt="Poster" >
+          </div>
+          
+          <div class="box-2">
+            <img src="assets/images/pop3.jpg" class="comments__img--2" alt="Poster">
+          </div>
 
+          <div class="box-1">
+            <img src="assets/images/pop3.jpg" class="comments__img--1" alt="Poster" >
+          </div>
+          
+          <div class="box-2">
+            <img src="assets/images/pop1.jpg" class="comments__img--2" alt="Poster">
+          </div>
+         
+        </div>
+        <div class="comments__content">
+            <h3 class="heading-secondary u-margin-bottom-medium">{{movie?.name}}</h3>
+            <div class="comments__form u-margin-bottom-medium">
+              <mov-comment-form (addComment)="addComment($event)"></mov-comment-form>
+            </div>
+            <div *ngFor="let comment of comments?.results" class="comments__list">
+              <mov-comment [comment]="comment"></mov-comment>
+            </div>
+         </div>
+    </div>
+</div>
+  

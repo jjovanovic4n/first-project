@@ -5,6 +5,7 @@ import { EditComponent } from './movies/movie-details/edit/edit.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
 import { CommentsComponent } from './movies/movie-details/comments/comments.component';
+import { TopMoviesComponent } from './movies/movie-details/top-movies/top-movies.component';
 
 
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'movies', component: MovieListComponent},
   { path: 'movies/:id', component:  MovieDetailsComponent},
   { path: 'movies/:id/comments', component: CommentsComponent},
+  { path: 'movies-top', component: TopMoviesComponent},
   { path: 'edit', component:  EditComponent},
   { path: 'edit/:id', component:  EditComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },

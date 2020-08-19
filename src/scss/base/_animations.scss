@@ -3,3 +3,19 @@
     50% {color:$color-primary;}
     100% {color:$color-white;}
 }
+
+
+@keyframes pulsing {
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow:$shadow-dark;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+}

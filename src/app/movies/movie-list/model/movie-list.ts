@@ -1,6 +1,10 @@
 import { Movie } from './movie';
 
 export class MovieList {
+    pipe: any;
+    filter(arg0: (word: any) => boolean): Movie[] {
+      throw new Error("Method not implemented.");
+    }
     count: number;
     results: Movie[];
   

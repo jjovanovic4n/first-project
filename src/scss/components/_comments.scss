@@ -1,0 +1,85 @@
+////COMMENTS COMPONENT
+
+.comments {
+    display: flex;
+    font-size: $default-font-size;
+    font-weight: 400;
+    padding: 2rem;
+    color: $color-white;
+    &__img-box {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 30%;
+        padding: 1rem 0;
+        border-left: 2px solid $color-white;
+        
+    }
+    &__img--1 {
+       flex: 1;
+       width: 100%;
+       border-bottom: 3px solid $color-white;
+       clip-path: polygon(0% 0, 100% 0, 85% 100%, 0% 100%);
+    }
+    &__img--2 {
+        flex: 1;
+        width: 100%;
+        border-top: 3px solid $color-white;
+        clip-path: polygon(0% 0, 85% 0, 100% 100%, 0% 100%);
+    }
+    &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: baseline;
+        margin-top: 5rem;
+
+    }
+    &__form,
+    &__list {
+        width: 80%;
+    }
+   
+
+}
+////COMMENT COMPONENT
+
+.comment {
+    display: flex;
+    align-items: center;
+
+    &__user {
+        margin-right: .5rem;
+        padding-top: 1.5rem;
+        align-self: stretch;
+        flex: 0 0 5%;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid $color-primary;
+        padding-top: 1.6rem;  
+    }
+
+    &__author {
+        text-transform: uppercase;
+        text-indent: 2rem;
+    }
+       
+    &__date {
+        font-style: italic;
+        font-weight: 500;
+    }
+       
+    &__text {
+        flex-wrap: wrap;
+    }
+
+}

@@ -1,57 +1,76 @@
-<br/>
-<footer class="mt-3">
-    <div class="container bcg--dark">
-        <div class="row py-3  align-items-center">
-          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-            <h6>Get connected with us on social networks!</h6>
+<footer class="footer-box">
+    <div class="footer-box__top">
+          <div class="footer-box__media">
+            <h6 class="heading-tertiary">Get connected with us on social networks!</h6>
           </div>
-          <div class="col-md-6 col-lg-7 text-center text-md-right">
-            <a href="https://www.facebook.com/" >
-                <i class="fa fa-facebook-official fa-2x mr-4 fb--bcg" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.instagram.com/" > 
-              <i class="fa fa-instagram fa-2x mr-4 inst--bcg" aria-hidden="true"></i>
-          </a>
-            <!-- Path to my Linked profile  -->
-            <a href="https://www.linkedin.com/in/jjovanovic4n/">
-                <i class="fa fa-linkedin fa-2x mr-4 link--bcg" aria-hidden="true"></i>
-            </a>
-            
+          <div class="footer-box__icons">
+            <div class="icon">
+                <!-- Path to my Linked profile  -->
+                <a href="https://www.linkedin.com/in/jjovanovic4n/">
+                  <svg class="footer-icon footer-icon__bcg-1">
+                    <use xlink:href="assets/sprite.svg#icon-linkedin2"></use>
+                </svg>
+                </a>  
+            </div>
+            <div class="icon">
+              <a href="https://www.facebook.com/" >
+                <svg class="footer-icon footer-icon__bcg-2">
+                  <use xlink:href="assets/sprite.svg#icon-facebook2"></use>
+              </svg>
+              </a>
+            </div>
+             <div class="icon">
+              <a href="https://www.instagram.com/" > 
+                <svg class="footer-icon footer-icon__bcg-3">
+                  <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+              </svg>
+               </a>
+            </div>
+            <div class="icon">
+              <!-- Path to my GitHub profile  -->
+              <a href="https://github.com/jjovanovic4n">
+                <svg class="footer-icon footer-icon__bcg-4 ">
+                  <use xlink:href="assets/sprite.svg#icon-github"></use>
+              </svg>
+              </a>
+            </div>
           </div>
-        </div>
     </div>
-    <div class="container text-center text-md-left bcg--light">
-      <div class="row ">
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-2">
-          <h6 class="text-uppercase font-weight-bold float-left font--title">Movie<span class="text-red">Mania</span></h6>
-          <hr class="mt-4">
-          <p>Best movies in one place!</p>
-        </div>
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase font-weight-bold text-center mt-4">Useful links</h6>
-          <p class=" text-center mt-3 ">
-            <a href="#!" class="hover--red">All movies</a>
-          </p>
-          <p class=" text-center mt-3">
-            <a href="#!" class="hover--red">Add movie</a>
-          </p>
-          <!-- <p>
-            <a href="#!"></a>
-          </p>
-          <p>
-            <a href="#!"></a>
-          </p> -->
-        </div>
-        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-2">
-          <h6 class="text-uppercase font-weight-bold float-right">Contact</h6>
-          <hr class="mt-4">
-          <p><i class="fa fa-home mr-2 fa-lg"></i>Novi Sad, NS 21000, Serbia</p>
-          <p><i class="fa fa-envelope mr-2"></i> jelenajovanovic4n@yahoo.com</p>
-          <p><i class="fa fa-mobile mr-2 fa-lg" aria-hidden="true"></i> +381 69 712 520</p>
-        </div>
-     </div>
+    <div class="footer-box__content">
+          <div class="footer-box__logo">
+              <div class="logo-box-small">
+                  <svg class="logo-box-small__logo">
+                      <use xlink:href="assets/sprite.svg#icon-video-camera"></use>
+                  </svg>
+                  <a class="logo-box-small__logo-text" [routerLink]="['/home']" routerLinkActive="active">Movie<span class="text-red">Mania</span></a>
+              </div>
+              <p class="footer-box__description">Best movies in one place!</p>
+          </div>
+          <div class="footer-box__box">
+            <div class="footer-box__useful-links">
+              <h6 class="footer-box__title">Useful links</h6>
+              <div class="footer-box__navigation">
+                <ul class="footer-box__list">
+                    <li class="footer-box__item"><a [routerLink]="['/movies']" onclick="scrollToMain()" class="footer-box__link">All movies</a></li>
+                    <li class="footer-box__item"> <a [routerLink]="['/edit']"  onclick="scrollToMain()"class="footer-box__link">Add movie</a></li>
+                    <li class="footer-box__item"> <a [routerLink]="['/movies-top']" onclick="scrollToMain()"  class="footer-box__link">Top movies</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-box__contact">
+                <h6 class="footer-box__title">Contact</h6>
+                <p><i class="fa fa-home  fa-lg"></i>Novi Sad, NS 21000, Serbia</p>
+                <p><i class="fa fa-envelope "></i> jelenajovanovic4n@yahoo.com</p>
+                <p><i class="fa fa-mobile fa-lg" aria-hidden="true"></i> +381 69 712 520</p>
+            </div>
+          </div>
     </div>
-    <div class="text-center py-3 bcg--dark"> © 2020 
-       <span class="heart ">Made with <i class="fa fa-heart" aria-hidden="true"></i> in Novi Sad</span>
+    <div class="footer-box__copyright">
+      <p class="footer-box__link"> &copy; 2020 JJovanovic Made with 
+        <svg class="icon-heart icon-heart__hover">
+            <use xlink:href="assets/sprite.svg#icon-heart"></use>
+        </svg>
+        in Novi Sad 
+      </p>
     </div>
 </footer>

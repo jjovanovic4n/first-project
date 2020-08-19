@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from './services/movie.service';
 import { MovieList } from './model/movie-list';
-import { Movie } from './model/movie';
 
 @Component({
   selector: 'mov-movie-list',
@@ -10,6 +9,8 @@ import { Movie } from './model/movie';
 })
 export class MovieListComponent implements OnInit {
   movies: MovieList;
+  movieTop:boolean = false;
+
   parameters = {
     page: 1,
     pageSize: 8,
