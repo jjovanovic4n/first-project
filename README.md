@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
 
+# Data
+
+Download server folder. Run in terminal `npm install` and `npm start`, and reload the page https://jjovanovic4n.github.io/first-project/movies
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
